@@ -18,7 +18,8 @@ RECETAS = [
 
 #Inicio o Home
 def home(request):
-    return render(request, 'home.html') #también enviar la lista de recetas
+    recetas = RECETAS
+    return render(request,'home.html', {"recetas":recetas})  #también enviar la lista de recetas
 
 def contacto(request):
     return render(request, 'contacto.html')
