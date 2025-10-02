@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Home - Recetario{% endblock %}
 
 {% block content %}
 
 <div class="container">
-    <h1>¡Bienvenid@ al Recetario!</h1>
-    <h2>Aquí encontrarás las recetas más deliciosas del grupo 0074</h2>
+    <div class="p-5 mb-4 rounded-3 mt-4 jumbotron-custom">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Bienvenid@s al Recetario!</h1>
+            <p class="col-md-8 fs-4">Explora una colección de recetas deliciosas y fáciles de preparar.</p>
+            <a class="btn btn-primary btn-lg" href="#recetas" role="button">Explorar Recetas</a>
+        </div>
+    </div>
     <!-- Lista de Recetas: for para mostrarlas. -->
     <div class="container">
         <div class="container d-flex flex-column gap-3">

@@ -1,0 +1,17 @@
+
+.jumbotron-custom {
+  /* Imagen de fondo con una capa oscura para legibilidad */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/jumbotron-bg.jpg');
+  
+  /* Ajustar la imagen para que cubra todo el div */
+  background-size: cover;
+  
+  /* Centrar la imagen */
+  background-position: center;
+}
+
+/* Cambiar el color del texto para que sea legible sobre el fondo oscuro */
+.jumbotron-custom h1,
+.jumbotron-custom p {
+  color: white;
+}
