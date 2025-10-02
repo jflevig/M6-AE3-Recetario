@@ -6,8 +6,9 @@ class Receta(models.Model):
     nombre = models.CharField(max_length=200)
     descripcion = models.TextField()
     ingredientes = models.TextField()
-    instrucciones = models.TextField()
-    #imagen = models.ImageField(upload_to='')
+    preparacion = models.TextField()
+    imagen = models.CharField(max_length=300, null=True, blank=True)
+    
 
     def __str__(self):
         return self.nombre

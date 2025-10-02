@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ receta.nombre }} - Receta{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">{{ receta.nombre }}</h1>
+
+    {% if receta.imagen %}
+        <img src="{% static receta.imagen %}" alt="{{ receta.nombre }}" class="img-fluid rounded mb-4">
+    {% endif %}
+
+    <p class="lead"><strong>Descripción:</strong> {{ receta.descripcion }}</p>
+
+    <h4>Ingredientes</h4>
+    <ul>
+        {% for ingrediente in receta.ingredientes %}
+            <li>{{ ingrediente }}</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Preparación</h4>
+    <ol>
+        {% for paso in receta.preparacion %}
+            <li>{{ paso }}</li>
+        {% endfor %}
+    </ol>
+
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-4">← Volver a la lista de recetas</a>
+</div>
+{% endblock %}

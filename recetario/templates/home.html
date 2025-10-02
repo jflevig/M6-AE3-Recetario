@@ -9,9 +9,9 @@
 <div class="container">
     <div class="p-5 mb-4 rounded-3 mt-4 jumbotron-custom">
         <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">Bienvenid@s al Recetario!</h1>
-            <p class="col-md-8 fs-4">Explora una colección de recetas deliciosas y fáciles de preparar.</p>
-            <a class="btn btn-primary btn-lg" href="#recetas" role="button">Explorar Recetas</a>
+            <h1 class="display-5 fw-bold">Bienvenid@s al Recetario Italiano!</h1>
+            <p class="col-md-8 fs-4">Explora una colección de recetas tradicionales de Italia.</p>
+            <a class="btn btn-primary btn-lg" href="#recetas" role="button">Explora nuestras recetas</a>
         </div>
     </div>
     <!-- Lista de Recetas: for para mostrarlas. -->
@@ -31,6 +31,7 @@
                         data-bs-parent="#accordion{{ forloop.counter0 }}">
                         <div class="accordion-body">
                             <p><strong>Descripción:</strong> {{ receta.descripcion|truncatewords:15 }}</p>
+                            <a href="{% url 'receta_detalle' receta.nombre %}" class="btn btn-outline-success mt-2">Ver receta completa</a>
                         </div>
                     </div>
                 </div>
