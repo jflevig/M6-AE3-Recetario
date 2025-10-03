@@ -21,3 +21,53 @@ img.img-fluid {
     height: auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+/* style para el template recetas.html*/
+.receta-detalle {
+    max-width: 700px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.imagen-receta {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cuadrada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.ingredientes-lista,
+.preparacion-lista {
+    padding-left: 1.2rem;
+    line-height: 1.6;
+}
+
+h4 {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #e0d4c3;
+    color: #333;
+    border-color: #c2b6a3;
+}
