@@ -1,28 +1,20 @@
-
 .jumbotron-custom {
-  /* Imagen de fondo con una capa oscura para legibilidad */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/jumbotron-bg.jpg');
-  
-  /* Ajustar la imagen para que cubra todo el div */
-  background-size: cover;
-  
-  /* Centrar la imagen */
-  background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/jumbotron-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* Cambiar el color del texto para que sea legible sobre el fondo oscuro */
 .jumbotron-custom h1,
 .jumbotron-custom p {
-  color: white;
+    color: white;
 }
 
 img.img-fluid {
     max-width: 100%;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* style para el template recetas.html*/
 .receta-detalle {
     max-width: 700px;
     margin: auto;
@@ -35,7 +27,7 @@ img.img-fluid {
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;

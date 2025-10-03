@@ -8,9 +8,9 @@
     <h1 class="mb-4 text-center">{{ receta.nombre }}</h1>
 
     {% if receta.imagen %}
-        <div class="imagen-receta mx-auto mb-4">
-            <img src="{% static receta.imagen %}" alt="{{ receta.nombre }}" class="img-cuadrada">
-        </div>
+    <div class="imagen-receta mx-auto mb-4">
+        <img src="{% static receta.imagen %}" alt="{{ receta.nombre }}" class="img-cuadrada">
+    </div>
     {% endif %}
 
     <p class="lead"><strong>Descripción:</strong> {{ receta.descripcion }}</p>
@@ -18,14 +18,14 @@
     <h4 class="mt-4">Ingredientes</h4>
     <ul class="ingredientes-lista">
         {% for ingrediente in receta.ingredientes %}
-            <li>{{ ingrediente }}</li>
+        <li>{{ ingrediente }}</li>
         {% endfor %}
     </ul>
 
     <h4 class="mt-4">Preparación</h4>
     <ol class="preparacion-lista">
         {% for paso in receta.preparacion %}
-            <li>{{ paso }}</li>
+        <li>{{ paso }}</li>
         {% endfor %}
     </ol>
 </div>
