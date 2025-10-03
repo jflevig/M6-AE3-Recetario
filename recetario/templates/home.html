@@ -15,7 +15,7 @@
         </div>
     </div>
     <!-- Lista de Recetas: for para mostrarlas. -->
-    <div class="container">
+    <div id="recetas" class="container">
         <div class="container d-flex flex-column gap-3">
             {% for receta in recetas %}
             <div class="accordion" id="accordion{{ forloop.counter0 }}">

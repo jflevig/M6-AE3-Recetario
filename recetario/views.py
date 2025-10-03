@@ -146,7 +146,7 @@ def home(request):
     return render(request, 'home.html', {"recetas": RECETA})
 
 def receta_detalle(request, nombre):
-    receta = next((r for r in RECETAS if r.nombre == nombre), None)
+    receta = next((r for r in RECETA if r.nombre == nombre), None)
 
     if receta is None:
         return render(request, 'RecNA.html')
