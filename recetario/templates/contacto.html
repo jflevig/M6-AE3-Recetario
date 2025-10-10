@@ -1,33 +1,58 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Contacto - Recetario{% endblock %}
 
 {% block content %}
+
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="border border-primary rounded col-12 col-lg-6 p-4 m-4">
-            <h1 class="mb-3">Envíanos tu mensaje!</h1>
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="exampleInputName">
-                </div>
-                <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Suscribirse a nuestras noticias.</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+    <div class="p-5 mb-4 rounded-3 mt-4 jumbotron-custom bg-success text-white">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">¡Hablemos! 💬</h1>
+            <p class="col-md-8 fs-4">¿Tienes una pregunta, sugerencia o quieres colaborar? Escríbenos.</p>
         </div>
     </div>
 </div>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            
+            <div class="p-4 border border-success rounded shadow-lg"> 
+
+                <h1 class="mb-4 text-center text-success">Envíanos tu mensaje!</h1>
+
+                <form>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputName">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Suscribirse a nuestras noticias.</label>
+                    </div>
+                    
+                    <div class="d-grid"> 
+                        <button type="submit" class="btn btn-success btn-lg mt-3">Enviar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

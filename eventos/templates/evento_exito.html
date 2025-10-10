@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container my-3">
-  <h1>Evento registrado satisfactoriamente!</h1>
-  <a href="{% url 'eventos' %}"><button class="btn btn-success mt-3">Volver a la lista de eventos</button></a>
+<div class="container my-5">
+  <div class="alert alert-success text-center py-4 rounded-3 shadow-sm">
+    <h2 class="mb-3">¡Evento registrado con éxito!</h2>
+    <p class="lead">Tu evento ha sido guardado correctamente en el sistema.</p>
+    <a href="{% url 'eventos' %}" class="btn btn-outline-light btn-lg mt-3">
+      ← Volver a la lista de eventos
+    </a>
+  </div>
 </div>
 {% endblock %}

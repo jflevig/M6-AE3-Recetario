@@ -46,11 +46,6 @@ img.img-fluid {
     line-height: 1.6;
 }
 
-h4 {
-    color: #6c757d;
-    font-weight: 600;
-}
-
 .btn-outline-secondary {
     border-radius: 8px;
     padding: 0.6rem 1.2rem;
@@ -62,4 +57,27 @@ h4 {
     background-color: #e0d4c3;
     color: #333;
     border-color: #c2b6a3;
+}
+/* Esto cambia el box-shadow azul claro por uno verde cuando el botón del acordeón tiene el foco */
+.accordion-button:focus {
+    outline: 0; /* Elimina el outline por defecto del navegador */
+    border-color: #28a745; /* Color del borde para el botón enfocado */
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Sombra verde */
+}
+
+/* Esto asegura que la caja del acordeón en sí tenga un borde verde si es necesario */
+.accordion-item {
+    border-color: #28a745; /* Aplica un borde verde al item completo del acordeón */
+}
+
+/* También puedes querer un borde verde cuando el acordeón está activo (abierto) */
+.accordion-button:not(.collapsed) {
+    color: #fff; /* Texto blanco para mejor contraste */
+    background-color: #28a745; /* Fondo verde para el encabezado abierto */
+    border-color: #28a745; /* Borde verde para el encabezado abierto */
+}
+
+/* Si hay un borde en el header cuando está cerrado */
+.accordion-header {
+    border-color: #28a745; /* Opcional: para el borde del header cuando está cerrado */
 }

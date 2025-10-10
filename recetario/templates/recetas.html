@@ -5,24 +5,23 @@
 
 {% block content %}
 <div class="container py-5 receta-detalle">
-    <h1 class="mb-4 text-center">{{ receta.nombre }}</h1>
-
+    <h1 class="mb-4 text-center text-success">{{ receta.nombre }}</h1> 
     {% if receta.imagen %}
     <div class="imagen-receta mx-auto mb-4">
         <img src="{% static receta.imagen %}" alt="{{ receta.nombre }}" class="img-cuadrada">
     </div>
     {% endif %}
 
-    <p class="lead"><strong>Descripción:</strong> {{ receta.descripcion }}</p>
+    <p class="lead"><strong class="text-success">Descripción:</strong> {{ receta.descripcion }}</p>
 
-    <h4 class="mt-4">Ingredientes</h4>
+    <h4 class="mt-4 text-success">Ingredientes</h4>
     <ul class="ingredientes-lista">
         {% for ingrediente in receta.ingredientes %}
         <li>{{ ingrediente }}</li>
         {% endfor %}
     </ul>
 
-    <h4 class="mt-4">Preparación</h4>
+    <h4 class="mt-4 text-success">Preparación</h4>
     <ol class="preparacion-lista">
         {% for paso in receta.preparacion %}
         <li>{{ paso }}</li>
