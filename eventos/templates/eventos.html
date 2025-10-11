@@ -26,37 +26,4 @@
     </div>
   </section>
 
-  <section>
-    <h1 class="my-3 text-success">Eventos Registrados</h1>
-    {% if eventos %}
-    <!-- Lista de Eventos -->
-    <div id="eventos" class="container">
-      <div class="container d-flex flex-column gap-3">
-        {% for evento in eventos %}
-        <div class="accordion" id="accordion2{{ forloop.counter0 }}">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse{{ forloop.counter0 }}" aria-expanded="false"
-                aria-controls="collapse{{ forloop.counter0 }}">
-                {{ evento.nombre_evento }}
-              </button>
-            </h2>
-            <div id="collapse{{ forloop.counter0 }}" class="accordion-collapse collapse"
-              data-bs-parent="#accordion2{{ forloop.counter0 }}">
-              <div class="accordion-body">
-                <p>{{ evento.fecha_evento }} - {{ evento.ubicacion }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% else %}
-    <p>No hay eventos registrados.</p>
-    {% endif %}
-  </section>
-
-</div>
 {% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %} Registro de Eventos {% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="my-3 text-success">Listado de Eventos Registrados</h1>
+    {% if eventos %}
+    <div id="eventos" class="container">
+      <div class="container d-flex flex-column gap-3">
+        {% for evento in eventos %}
+        <div class="accordion" id="accordion2{{ forloop.counter0 }}">
+          <div class="accordion-item shadow-sm">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse{{ forloop.counter0 }}" aria-expanded="false"
+                aria-controls="collapse{{ forloop.counter0 }}">
+                {{ evento.nombre_evento }}
+              </button>
+            </h2>
+            <div id="collapse{{ forloop.counter0 }}" class="accordion-collapse collapse"
+              data-bs-parent="#accordion2{{ forloop.counter0 }}">
+              <div class="accordion-body">
+                <p>
+                  <strong>Fecha:</strong> {{ evento.fecha_evento }} <br>
+                  <strong>Ubicación:</strong> {{ evento.ubicacion }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info text-center mt-4">
+      <p class="lead mb-0">No hay eventos registrados.</p>
+    </div>
+    {% endif %}
+</div>
+<div class="card-footer bg-transparent border-success text-end">
+    <a href="{% url 'editar_evento' evento.id %}" class="btn btn-sm btn-outline-success me-2">
+        <i class="fas fa-edit"></i> Editar
+    </a>
+    <a href="{% url 'eliminar_evento' evento.id %}" class="btn btn-sm btn-outline-danger">
+    <i class="fas fa-trash-alt"></i> Eliminar
+    </a>
+</div>
+<div class="text-center mt-5 mb-5">
+    <a href="{% url 'eventos' %}" class="btn btn-success btn-lg shadow-lg">
+      <i class="fas fa-plus-circle me-2"></i> Registrar Nuevo Evento
+    </a>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}

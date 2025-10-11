@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Acceso Restringido{% endblock %}
+
+{% block content %}
+<div class="container my-5 d-flex justify-content-center">
+    <div class="card p-5 shadow-lg border-0" style="max-width: 600px; border-radius: 15px;">
+        <h1 class="card-title text-center text-danger mb-4" style="font-size: 2.5rem; font-weight: 700;">
+            <i class="fas fa-lock mr-3"></i> Acceso Restringido
+        </h1>
+        <div class="alert alert-danger text-center" role="alert" style="border-radius: 10px; background-color: #f8d7da; border-color: #f5c6cb; color: #721c24;">
+            <p class="lead mb-0">¡Permiso Denegado!</p>
+            <p class="mb-0 mt-2">No tienes la autorización necesaria para realizar esta acción.</p>
+        </div>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4">
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg shadow-sm">
+                <i class="fas fa-home mr-1"></i> Ir a Inicio
+            </a>
+            <a href="{% url 'eventos:mis_eventos' %}" class="btn btn-success btn-lg shadow-lg">
+                <i class="fas fa-calendar-alt mr-1"></i> Ver Mis Eventos
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
